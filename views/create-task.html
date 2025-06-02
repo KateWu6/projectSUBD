@@ -1,0 +1,30 @@
+{{define "content"}}
+<div class="container">
+    <h1>Создание задачи</h1>
+    <form action="/create-task" method="POST">
+        <div>
+            <label for="point">Детальное описание задачи:</label>
+            <textarea id="point" name="task_point" required></textarea>
+        </div>
+        <div>
+            <label for="status">Статус задачи:</label>
+            <select id="status" name="task_status">
+                <option value="Новая">Новая</option>
+                <option value="В процессе">В процессе</option>
+                <option value="Готова">Готова</option>
+            </select>
+        </div>
+        <div>
+            <label for="deadline">Срок выполнения:</label>
+            <input type="datetime-local" id="deadline" name="deadline" required>
+        </div>
+        <div>
+            <label for="project-id">Проект:</label>
+            <select id="project-id" name="project_id">
+                <!-- возможные проекты -->
+            </select>
+        </div>
+        <button type="submit">Создать задачу</button>
+    </form>
+</div>
+{{end}}

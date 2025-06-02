@@ -1,0 +1,9 @@
+{{define "content"}}
+<div class="container">
+    <h1>Профиль пользователя</h1>
+    <p>ФИО: {{.Surname}} {{.Firstname}} {{.Middlename}}</p>
+    <p>Должность: {{.Post}}</p>
+    <p>Контакты: {{.Contacts}}</p>
+    <img src="{{.Photo}}" alt="Фотография пользователя">
+</div>
+{{end}}

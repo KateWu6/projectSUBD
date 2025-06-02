@@ -1,0 +1,27 @@
+{{define "content"}}
+<div class="container">
+    <h1>Задачи проекта</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Описание</th>
+                <th>Статус</th>
+                <th>Срок выполнения</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Tasks}}
+            <tr>
+                <td>{{.TaskPoint}}</td>
+                <td>{{.TaskStatus}}</td>
+                <td>{{.Deadline.Format "2006-01-02"}}</td>
+            </tr>
+            {{else}}
+            <tr>
+                <td colspan="3">Нет задач.</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</div>
+{{end}}
