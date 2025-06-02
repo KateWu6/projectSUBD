@@ -9,13 +9,13 @@ import (
     "gorm.io/driver/postgres"
     "gorm.io/gorm"
 
-    "github.com/KateWu6/projectSUBD/config"
-    "github.com/KateWu6/projectSUBD/controllers/auth"
-    "github.com/KateWu6/projectSUBD/controllers/profile"
-    "github.com/KateWu6/projectSUBD/controllers/project"
-    "github.com/KateWu6/projectSUBD/controllers/task"
-    "github.com/KateWu6/projectSUBD/controllers/user"
-    "github.com/KateWu6/projectSUBD/models"
+    "projectSUBD/config"       // правильно импортировать local package
+    "projectSUBD/controllers/auth"
+    "projectSUBD/controllers/profile"
+    "projectSUBD/controllers/project"
+    "projectSUBD/controllers/task"
+    "projectSUBD/controllers/user"
+    "projectSUBD/models"
 )
 
 // Config представляет конфигурационные данные
