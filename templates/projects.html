@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница проектов</title>
+</head>
+<body>
+    <h1>Проекты</h1>
+    <table border="1">
+        <thead>
+            <th>ID</th>
+            <th>Название проекта</th>
+            <th>Цель проекта</th>
+            <th>Статус проекта</th>
+            <th>Сроки</th>
+            <th>Задачи</th>
+        </thead>
+        {{range .}}
+        <tbody>
+            <td>{{.ProjectID}}</td>
+            <td>{{.ProjectName}}</td>
+            <td>{{.ProjectGoal}}</td>
+            <td>{{.ProjectStatus}}</td>
+            <td>{{FormatDate .Deadlines}}</td>
+            <td><a href="/projects/{{.ProjectID}}/tasks">Задачи</a></td>
+        </tbody>
+        {{end}}
+    </table>
+</body>
+</html>

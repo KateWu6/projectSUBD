@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи проекта</title>
+</head>
+<body>
+    <h1>Задачи пользователя</h1>
+    <table border="1">
+           <thead>
+               <tr>
+                   <th>Название задачи</th>
+                   <th>Статус</th>
+                   <th>Срок сдачи</th>
+                   <th>Проект</th>
+               </tr>
+           </thead>
+           <tbody>
+               {{ range . }}
+               <tr>
+                   <td>{{ .TaskPoint }}</td>
+                   <td>{{ .TaskStatus }}</td>
+                   <td>{{ .Deadline.Format "2006-01-02" }}</td>
+                   <td>{{ .ProjectName }}</td>
+               </tr>
+               {{ else }}
+                <p>Нет активных задач.</p>
+               {{ end }}
+           </tbody>
+       </table>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи проекта</title>
+</head>
+<body>
+    <h1>Задачи проекта</h1>
+    <a href="/add-task" class="btn-add-task">Добавить задачу</a>
+    <table border="1">
+        <thead>
+            <th>ID задачи</th>
+            <th>Название задачи</th>
+            <th>Статус задачи</th>
+            <th>Срок задачи</th>
+            <th>Назначенный сотрудник</th>
+        </thead>
+        {{range .}}
+        <tr>
+            <td>{{.TaskID}}</td>
+            <td>{{.TaskPoint}}</td>
+            <td>{{.TaskStatus}}</td>
+            <td>{{FormatDate .Deadline}}</td>
+            <td>{{.EmployeeName}}</td>
+        </tr>
+        {{else}}
+        <tr>
+            <td colspan="5">Нет задач для данного проекта</td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+</html>
